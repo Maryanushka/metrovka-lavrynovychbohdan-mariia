@@ -1,0 +1,55 @@
+<svg width="16" height="16" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:figma="http://www.figma.com/figma/ns">
+<title>Shape</title>
+<desc>Created using Figma</desc>
+<g id="Canvas" transform="translate(953 315)" figma:type="canvas">
+<rect x="-953" y="-315" width="16" height="16" fill="#FFFFFF"/>
+<mask id="mask0_alpha" mask-type="alpha">
+<path d="M -1194 -1186L -65 -1186L -65 2197L -1194 2197L -1194 -1186Z" fill="#FFFFFF"/>
+</mask>
+<g id="890+" mask="url(#mask0_alpha)" figma:type="frame">
+<path d="M -1194 -1186L -65 -1186L -65 2197L -1194 2197L -1194 -1186Z" fill="#5A6872"/>
+<g id="Stacked Group" figma:type="frame">
+<g id="Stacked Group 3" figma:type="frame">
+<g id="Stacked Group 2" figma:type="frame">
+<g id="Stacked Group" figma:type="frame">
+<g id="Group" figma:type="frame">
+<g id="Rectangle" figma:type="vector">
+<use xlink:href="#path0_fill" transform="translate(-1075 -550)" fill="#FFFFFF"/>
+</g>
+<g id="Stacked Group" figma:type="frame">
+<g id="Group 11" figma:type="frame">
+<g id="card/no-overlay" figma:type="instance">
+<g id="Group 7" figma:type="frame">
+<g id="Stacked Group" figma:type="frame">
+<g id="Stacked Group" figma:type="frame">
+<g id="Stacked Group" figma:type="frame">
+<g id="Group 2" figma:type="frame">
+<g id="Group 3" figma:type="frame">
+<g id="checkmark--glyph" figma:type="instance">
+<g id="checkmark--glyph" figma:type="frame">
+<g id="Shape" figma:type="vector-operation">
+<use xlink:href="#path1_fill" transform="translate(-953 -315)" fill="#30AE63"/>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+<defs>
+<path id="path0_fill" fill-rule="evenodd" d="M 0 2C 0 0.895431 0.895431 0 2 0L 888 0C 889.105 0 890 0.895431 890 2L 890 382C 890 383.105 889.105 384 888 384L 2 384C 0.895431 384 0 383.105 0 382L 0 2Z"/>
+<path id="path1_fill" fill-rule="evenodd" d="M 0 8C 0 3.60001 3.59998 0 8 0C 12.4 0 16 3.60001 16 8C 16 12.4 12.4 16 8 16C 3.59998 16 0 12.4 0 8ZM 3.40002 8.10001L 6.70001 11.5L 12.2 5.89999L 10.8 4.5L 6.70001 8.60001L 4.80005 6.70001L 3.40002 8.10001Z"/>
+</defs>
+</svg>
