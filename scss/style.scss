@@ -417,7 +417,7 @@ span.item:before {
 		justify-content: space-between;
 		align-items: center;
 		padding-top: 0.4rem;
-		padding-bottom: 4.8rem;
+		padding-bottom: 6rem;
 		img {
 			padding-top: 2.5rem;
     		padding-left: 5rem;
@@ -429,7 +429,8 @@ span.item:before {
 			width: 48.93%;
 			padding-top: 3rem;
 			background-color: $white;
-			padding-top: 1.1rem;
+			padding-top: 2.1rem;
+    		margin-top: 2.1rem;
 			min-height: 25.1rem;
 			}
 			ol>li{
@@ -446,12 +447,11 @@ span.item:before {
 			h2{
 				font-weight: normal;
 				font-size: 1.5rem; //24px
-				padding-left: 2.5rem;
 			    display: flex;
 			    margin:0;
 			    align-items: center;
 			    padding-left: 2.4rem;
-			    padding-top: 2.2rem;
+			    padding-top: 0.8rem;
 				img{
 					width:62px;
 					padding: 0 1.25rem 0 0;
@@ -481,15 +481,31 @@ span.item:before {
 			}
 		}
 	.telegram-toogle{
+		    position: absolute;
+		    bottom: 38.3px;
+    		left: 47.4%;
 		a{
 			display:inline-block;
 		}
 		span{
-			width:0.875rem;
-			height:0.875rem;
-			box-sizing:border-box;
+			height: 14px;
+		    width: 14px;
+		    margin: 0 4px;
 			border: 1px solid $green;
 			background: $green;
+			box-sizing:border-box;
+			border-radius: 50%;
+			display: inline-block;
+			&:hover{
+				    	background-color: $white;
+				    	border: 2px solid $green;
+				    	color: $green;
+				    }
+			&:focus{
+				    	background-color: $white;
+				    	border: 2px solid $green;
+				    	color: $green;
+				    }
 		}
 	}
 }
