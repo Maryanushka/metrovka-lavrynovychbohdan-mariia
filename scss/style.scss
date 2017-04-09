@@ -15,7 +15,7 @@
 }
 
 body{
-	background-color: $bgc;
+	background-color: rgba(90, 104, 114, 0.08);
 	color: $white;
 	width: 100%;
 	font-size: 14px;
@@ -319,12 +319,13 @@ span.item:before {
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 2px solid $disabled-color;
+    border: 2px $disabled-color;
+    border-style: solid none;
     font-size: 16px;
     line-height: .024;
     position: absolute;
     bottom: 0;
-    width: 99.5%;
+    width: 100%;
     &:hover{
     	border-color: $green;
     	color: $green;
@@ -365,4 +366,173 @@ span.item:before {
 }
 .helper {
     margin-bottom: 50px;
+}
+
+// lb styles start 
+// 4th section
+
+.telegram-promo{
+	@extend .best-offer;
+	background: none;
+	display:flex;
+	flex-direction: column;
+	color: $dark-grey;
+	.telegram-promo-description{
+		padding-top: 4.1rem;
+		display:flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		h4{
+			font-size: 1.5rem; //24px
+			font-weight: normal;
+			line-height: 2rem; //32px;
+			max-width: 16.6rem;
+		}
+		p{
+			padding-top: 0.5rem;
+			max-width: 30.3rem;
+			font-size: 0.875rem;
+		}
+	}
+	.telegram-tabs{
+		flex-direction: row;
+		padding-top: 0.2rem;
+		a{	
+			display: inline-block;
+			padding: 1rem 1.2rem;
+			box-sizing: border-box;
+		}
+		a:hover{
+			border-bottom: 1px green solid;
+			box-sizing: border-box;
+		}
+	}
+	a{ 
+		color: $dark-grey;
+		font-size: 0.875rem;
+	}
+	.telegram-promo-presentation{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding-top: 0.4rem;
+		padding-bottom: 6.3rem;
+		img {
+			padding-top: 2.9rem;
+    		padding-left: 5rem;
+    		width: 31.6853933%;
+    		height: 64.382%;
+		}
+		.telegram-promo-presentation--right{
+			display: flex;
+			flex-direction: column;
+			width: 48.93%;
+			padding-top: 3rem;
+			background-color: $white;
+			min-height: 25.1rem;
+			}
+			ol>li{
+				font-size: 1.25rem; //20px
+			}
+			h2{
+				font-weight: normal;
+				font-size: 1.5rem; //24px
+			}
+		}
+}
+
+.blog-metrovka{
+	@extend .best-offer;
+	.blog-metrovka-header{
+		text-align:center;
+		h2{
+			font-size: 1.5rem;
+			font-weight:normal;
+		}
+		p{
+			font-size: 0.875rem;
+			line-height:1.25rem;
+			max-width:30rem;
+			margin: 0 auto;
+		}
+	}
+	.blog-wrapper{
+		display: flex;
+		justify-content: space-around;
+		padding-bottom: 5rem;
+		img{
+			max-width: 272px;
+		}
+	}
+	.blog-item{
+		width: 30.5617%;
+		a{
+			color: $dark-grey;
+		}
+		.blog-description{
+			.title{
+				text-transform: uppercase;
+			}
+			.title--purple{
+				color:#BA8FF7;
+			}
+			.title--green{
+				color:#30AE63;
+			}
+			.title--blue{
+				color:#2573D8;
+			}
+			h3{
+				font-weight:normal;
+				line-height: 1.5rem
+			}
+		}
+	}
+}
+
+footer{
+	padding-bottom: 3rem;
+}
+
+.footer{
+	@extend .best-offer;
+	background: none;
+	display:flex;
+	flex-direction: column;
+	a{
+		color: $dark-grey;
+		text-decoration:none;
+		display: block;
+    	margin: 0 auto;
+	}
+	h2{
+		font-size: 1rem;
+		font-weight: normal;
+		line-height: 2rem;
+	}
+	.footer-links-info{
+		display:flex;
+		ul{
+			width:25%;
+		}
+		li{
+			list-style-type: none;
+			max-width: 10.5rem; 
+			line-height: 2rem;
+			a.result{
+			    background-color: $green;
+			    color: $white;
+			    display: flex;
+			    margin-top: 7%;
+			    justify-content: center;
+			    align-items: center;		
+			    &:hover{
+			    	background-color: $white;
+			    	border: 2px solid $green;
+			    	color: $green;
+			    }
+			}
+		}
+	}
 }
