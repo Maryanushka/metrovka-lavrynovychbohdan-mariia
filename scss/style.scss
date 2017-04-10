@@ -1,57 +1,29 @@
 @import 'vars.scss';
-// миксины
-@mixin hover_underline($top){
-	left: -2px;
-    position: relative;
-    top: $top;
-    background: $white;
-    bottom: 5px;
-    content: " ";
-    display: block;
-    height: 2px;
-    -webkit-transition: width .5s cubic-bezier(0.165, .84, .44, 1);
-    transition: width .5s cubic-bezier(0.165, .84, .44, 1);
-    width: 0;
-}
+@import 'base.scss';
+@import 'buttons.scss';
+@import 'mixins.scss';
 
-body{
-	background-color: rgba(90, 104, 114, 0.08);
-	color: $white;
-	width: 100%;
-	font-size: 14px;
-	line-heght: .017;
-	font-family: 'Open Sans', sans-serif;
-	margin: 0 auto;
-	box-sizing: content-box;
-}
-a{
-	text-decoration: none;
-	color: $white;
-}
-h1,h4{
-	font-weight: 400;
-	margin:0;
-	padding:0;
-}
+
+
 .main{
-	max-width: 1140px;
-	min-height: 301px;
+	max-width: 84.5vw;
+	min-height: 51vh;
 	width:100%;
 	margin: 0 auto;
 	background-image: url("../img/background.jpg");
 	background-repeat: round;
 }
 .header{
-	//margin-top: 15px;
-	padding: 18px 119px;
+	padding: 0 9vw;
 	h1{
 		margin-top: 9%;
 		margin-bottom: 6%;
-		font-size: 30px;
+		font-size: 2.5em;
 		line-height: .038;
 	}
 }
 .topline{
+	padding-top: 1vw;
 	display:flex;
 	align-items: center;
 	justify-content: space-between;
@@ -62,18 +34,17 @@ h1,h4{
 		display: flex;
 		align-items: center;
 		li{
-			padding-right: 44px;
-			font-size: 14px;
+			padding-right: 3vw;
 			line-height: .02;
 			img{
-				width: 35px;
-				height: 40px;
+				width: 2.7vw;
+				height: 3vw;
 
 			}
 			&:last-child img{
 				display: inline-block;
-				width: 20px;
-				padding-right: 10px;
+				width: 1.5vw;
+				padding-right: 1vw;
 			}
 			&:last-child a{
 				display: flex;
@@ -82,25 +53,6 @@ h1,h4{
 		}
 
 	}
-	.add-adt{
-	margin-left: 7%;
-	width: 236px;
-	height: 40px;
-	background-color: rgba($white, .15);
-	display: flex;
-	justify-content: center;
-	align-items:inherit;
-		.fa-plus-circle{
-			font-size: 1.35em;
-			margin-right: 10px;
-			margin-left: -6%;
-		}
-		&:hover{
-			color:$green;
-			background-color: $white;
-		}
-	}
-
 }	
 .active_main_menu:before{
 	@include hover_underline(1vw);
@@ -118,11 +70,10 @@ h1,h4{
 
 
 .bottomline{
-	display: inline-flex;
+	display: flex;
 	justify-content: space-between;
 	align-items:flex-end;
-    max-width: 890px;
-    width: 100%;
+    width: 70%;
     position: absolute;
 	.select-city{
 		min-width:344px;
@@ -158,21 +109,7 @@ h1,h4{
 	    }
 		}
 	}
-	a.search {
-    width: 200px;
-    height: 40px;
-    background-color: $white;
-    color: $green;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 5px;
-    line-height: .017;
-    &:hover{
-    	background-color: $green;
-    	color: $white;
-    }
-	}
+
 }
 
 
@@ -203,6 +140,7 @@ h1,h4{
 			}
 			.select-station{
 				height: 50px;
+				margin-bottom: 7%;
 			}
 		}
 
@@ -210,21 +148,12 @@ h1,h4{
 			width: 411px;
 			height: 212px;
 		}
-		a.result {
-	    width: 320px;
-	    height: 40px;
-	    background-color: $green;
-	    color: $white;
-	    display: flex;
-	    margin-top: 7%;
-	    justify-content: center;
-	    align-items: center;		
-	    &:hover{
-	    	background-color: $white;
-	    	border: 2px solid $green;
-	    	color: $green;
-	    }
-	}
+		a.green-button {
+	    	color: $white;
+	    	&:hover{
+	    		color: $green;
+	    	}
+		}
 	}
 	a{
 		color: $bgc;
@@ -276,9 +205,7 @@ span.item:before {
     			margin-left: 25px;
     		}
 		}
-		.more{
-			color: $bgc;
-		}
+
 		.best-offer-thumbnails{
 			display: flex;
 			justify-content: space-between;
@@ -313,25 +240,7 @@ span.item:before {
 			
 		}
 	}
-	a.more{
-    color: $bgc;
-    min-height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 2px $disabled-color;
-    border-style: solid none;
-    font-size: 16px;
-    line-height: .024;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    &:hover{
-    	border-color: $green;
-    	color: $green;
-    }
-	
-}
+
 .best-offer-item:before {
     width: 15px;
     z-index: 100;
@@ -590,7 +499,7 @@ footer{
 	.social-links{
 		a{
 			display: inline-block;
-			padding: 0px 1px;
+			padding: 0 1px;
 		}
 	}
 	.footer-links-info{

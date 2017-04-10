@@ -1,0 +1,14 @@
+// миксины
+@mixin hover_underline($top){
+	left: -2px;
+    position: relative;
+    top: $top;
+    background: $white;
+    bottom: 5px;
+    content: " ";
+    display: block;
+    height: 2px;
+    -webkit-transition: width .5s cubic-bezier(0.165, .84, .44, 1);
+    transition: width .5s cubic-bezier(0.165, .84, .44, 1);
+    width: 0;
+}
