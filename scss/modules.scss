@@ -1,0 +1,48 @@
+@import 'buttons.scss';
+@import 'mixins.scss';
+// menu for mobile
+
+.menu-for-mobile{
+	@media screen and (max-width:850px){
+		display: block;
+	}
+
+}
+.menu-for-mobile-background{
+	z-index: -1;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left:0;
+	right: 0;
+	z-index: 1100;
+	background-color: rgba(90,104,144,.9);
+	filter: blur(3px);
+}
+.menu-for-mobile-wrapper{
+	position: absolute;
+	z-index: 10000000;
+	ul{
+		margin: 0;
+		padding: 0;
+		list-style-type: none;
+		display: flex;
+		flex-direction:column;
+		align-items: baseline;
+		li{
+			height: 2rem;
+		}
+	}
+}
+.active-mobile-menu:before{
+	@include hover_underline(2.5vw);
+}
+.active-mobile-menu:hover:before{
+	width: 110%;
+}
+.mobile-menu-login:before{
+	@include hover_underline(2.5vw);
+}
+.mobile-menu-login:hover:before{
+	width: 110%;
+}

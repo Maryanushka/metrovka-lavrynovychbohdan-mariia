@@ -14,11 +14,36 @@
 	<!-- стили плагина для селекта -->
 	<link rel="stylesheet" href="css/cs-select.css">
 	<link rel="stylesheet" href="css/cs-skin-border.css">
+	<!-- стили для слайдера -->
+	<link rel="stylesheet" href="libs/slick/slick.css">
+	<link rel="stylesheet" href="libs/slick/slick-theme.css">
 </head>
 <body>
 	<section class="main">
 		<div class="header">
+
+		<div class="menu-for-mobile">	
+		<div class="menu-for-mobile-background"></div>
+
+			<div class="menu-for-mobile-wrapper">
+			<a href="index.html"><img src="img/logo.svg"></a>
+				<ul>				
+					<li><a href="#" class="active-mobile-menu">Аренда</a></li>
+					<li><a href="#" class="active-mobile-menu">Продажа</a></li>
+					<li><a href="#" class="active-mobile-menu">Посуточно</a></li>
+					<li><a href="#" class="active-mobile-menu">Блог</a></li>
+					<li><a href="#" class="active-mobile-menu">Контакты</a></li>
+					<li><a href="#" class="active-mobile-menu" >Новый поиск</a></li>
+					<li><a href="#" type="button" class="add-adt"><i class="fa fa-plus-circle" aria-hidden="true"></i>Разместить обьявление</a></li>
+					<li><a href="#" type="button" class="mobile-menu-login">Войти</a></li>
+				</ul>
+			
+			</div>
+					
+		</div>
+
 		<div class="topline">
+			
 			<ul>
 				<li><a href="index.html"><img src="img/logo.svg"></a></li>
 				<li><a href="#" class="active_main_menu">Аренда</a></li>
@@ -83,9 +108,9 @@
 </section>
 <!-- вторая секция/ second section-->
 	<section class="best-offer">
-	<div class="best-offer-wrapper">
+	<div class="best-offer-wrapper ">
 		<h1>Лучшие предложения в Киеве</h1>
-		<div class="best-offer-thumbnails">
+		<div class="best-offer-thumbnails helper">
 			<div class="best-offer-item">
 				<img src="img/homees-01.jpg" alt="квартира">
 				<div class="best-offer-description">
@@ -318,6 +343,9 @@
 	<!-- плагин для селекта -->
 	<script src="js/classie.js"></script>
 	<script src="js/selectFx.js"></script>
+
+	<!-- скрипты для слайдера -->
+	<script type="text/javascript" src='libs/slick/slick.min.js'></script>
 	<script>
 	// это скрипт для мини плагина коррктного отображения селектора 
 			(function() {
@@ -326,8 +354,51 @@
 				});
 			})();
 // этот скрипт добаляет пару классов для корректного отображения точки внутри селекта во второй секции
-			$(document).ready(function() {
-				$(".real-estate-descr").find('.cs-placeholder').addClass('item').css({"padding-left": "3vw"});
+		// var j = jQuery.noConflict();
+		// 	j(document).ready(function() {
+		// 		j(".real-estate-descr").find('.cs-placeholder').addClass('item').css({"padding-left": "3vw"});
+		// 	});
+
+
+
+			// slick slider
+			jQuery(document).ready(function(){
+			  jQuery(".best-offer-thumbnails").slick({
+        		arrows: true,
+        		speed: 1500,
+        		infinite: true,
+        		variableWidth: true,
+        		responsive:[
+        			{breakpoint: 1200,
+        			settings:{
+        				slidesToShow: 4,
+        				slideToScroll:1,
+        				infinite: true,
+        				dots: false
+        			}},
+        			{breakpoint: 800,
+        				settings:{
+        				slidesToShow: 3,
+        				slideToScroll:1,
+        				infinite: true,
+        				dots: false
+        				}},
+        			{breakpoint: 600,
+        				settings:{
+        				slidesToShow: 2,
+        				slideToScroll:1,
+        				infinite: true,
+        				dots: false
+        				}},
+        			{breakpoint: 400,
+        				settings:{
+        				slidesToShow: 1,
+        				slideToScroll:1,
+        				infinite: true,
+        				dots: false
+        				}},
+        			]
+			  });
 			});
 		</script>
 </body>

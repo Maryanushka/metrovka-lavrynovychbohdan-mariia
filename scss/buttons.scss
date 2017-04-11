@@ -2,11 +2,15 @@
 
 
 .topline>.add-adt{
-	margin-left: 7%;
-	width: 18vw;
 	height: $button-height;
 	background-color: rgba($white, .15);
 	display: flex;
+	padding: 2rem 3rem;
+	font-size: 1em;
+	margin-right: 1rem;
+	@media screen and(max-width: 900px){
+		font-size: .8em;
+	}
 	justify-content: center;
 	align-items:inherit;
 		.fa-plus-circle{
@@ -21,7 +25,7 @@
 	}
 
 .bottomline>a.search {
-    width: 15vw;
+    width: 201px;
     height: $button-height;
     background-color: $white;
     color: $green;
@@ -53,17 +57,20 @@
 	}
 
 	.more{
+	text-align: center;
     color: $bgc;
     min-height: $button-height;
     display: flex;
     align-items: center;
     justify-content: center;
     border: $btn-border solid $disabled-color;
-    font-size: 1.2em;
-    line-height: .024;
+    font-size: 1em;
     position: absolute;
     bottom: 0;
     width: 99.6%;
+    @media screen and(max-width: 500px){
+    	font-size: .9em;
+    }
     &:hover{
     	border-color: $green;
     	color: $green;

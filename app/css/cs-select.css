@@ -83,3 +83,15 @@ span.cs-placeholder:after{
     content: "";
     background: url('../img/caret.svg') center no-repeat;
 }
+@media screen and (max-width: 600px){
+	span.cs-placeholder:after{
+		right: 3vw;
+    	width: 3vw;
+	}
+	div.cs-skin-border{
+		font-size: 0.85em;
+	}
+	.cs-placeholder .item{
+		padding-left: 7em;
+	}
+} 
