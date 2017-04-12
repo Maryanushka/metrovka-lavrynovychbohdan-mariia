@@ -2,14 +2,20 @@
 @import 'mixins.scss';
 // menu for mobile
 
-.menu-for-mobile{
+.icon, .topline-mobile-logo{
 	@media screen and (max-width:850px){
 		display: block;
 	}
+	@media screen and(min-width: 851px){
+		display: none;
+	}
 
 }
+.menu-for-mobile{
+	display: none;
+}
 .menu-for-mobile-background{
-	z-index: -1;
+	z-index: 1;
 	position: absolute;
 	top: 0;
 	bottom: 0;
@@ -21,9 +27,13 @@
 }
 .menu-for-mobile-wrapper{
 	position: absolute;
-	z-index: 10000000;
+    z-index: 10000;
+    display: flex;
+    left: 2rem;
+    width: 100%;
+    justify-content: flex-start;
 	ul{
-		margin: 0;
+		margin: 0 0 0 2rem;
 		padding: 0;
 		list-style-type: none;
 		display: flex;
@@ -35,14 +45,18 @@
 	}
 }
 .active-mobile-menu:before{
-	@include hover_underline(2.5vw);
+	@include hover_underline(1.5rem);
 }
 .active-mobile-menu:hover:before{
 	width: 110%;
 }
 .mobile-menu-login:before{
-	@include hover_underline(2.5vw);
+	@include hover_underline(1.5rem);
 }
 .mobile-menu-login:hover:before{
 	width: 110%;
+}
+
+.menu-for-mobile{
+	display: none;
 }

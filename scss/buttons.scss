@@ -1,11 +1,11 @@
 @import 'vars.scss';
 
 
-.topline>.add-adt{
+.decstop-menu>.add-adt{
 	height: $button-height;
 	background-color: rgba($white, .15);
 	display: flex;
-	padding: 2rem 3rem;
+	padding: 0.1rem 1rem;
 	font-size: 1em;
 	margin-right: 1rem;
 	@media screen and(max-width: 900px){
@@ -33,7 +33,6 @@
     justify-content: center;
     align-items: center;
     margin-bottom: 5px;
-    line-height: .017;
     &:hover{
     	background-color: $green;
     	color: $white;
@@ -75,4 +74,62 @@
     	border-color: $green;
     	color: $green;
     }
+}
+
+
+// styles for mobile humburger button
+.icon{
+  display: block;
+  width: 2rem;
+  height: auto;
+}
+svg.hamburger-icon {
+  margin: auto;
+  display: block;
+  width: 100%;
+  height: 100%;
+  .hamburger-icon__container {
+    fill: #fff;
+    .hamburger-icon__line {
+     transition: transform 400ms ease-out;
+     transform-origin: 16px 16px;
+    }
+    .hamburger-icon__middle {
+      transform: scale(1);
+    }
+  }
+}
+.icon.active {
+	position: fixed;
+	top:1rem;
+	right: 3rem;
+	z-index: 10005;
+  	svg.hamburger-icon{
+    .hamburger-icon__top {
+      transform: rotate(-45deg)  translate(0, 8px);
+    }
+    .hamburger-icon__bottom {
+      transform: rotate(45deg)  translate(0, -8px);
+    }
+    .hamburger-icon__middle {
+      transform: scale(0);
+    }
+  }
+}
+
+// styles for button in mobile menu
+i.fa.fa-plus-circle{
+	margin-right: .4rem;
+}
+.menu-for-mobile-wrapper>ul>li:nth-child(7){
+	margin: 1rem 0;
+}
+.add-adt {
+    padding: .7rem 1rem;
+    background-color: rgba(255, 255, 255, .15);
+    &:hover{
+    	color: $green;
+    	border: 2px solid $green;
+    }
+    
 }

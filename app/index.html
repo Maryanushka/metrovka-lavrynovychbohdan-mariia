@@ -21,6 +21,18 @@
 <body>
 	<section class="main">
 		<div class="header">
+		<div class="topline">
+		<a href="index.html" class="topline-mobile-logo"><img src="img/logo.svg"></a>
+		<div class="icon">
+		  <svg version="1.1" id="hamburger-icon" class="hamburger-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0" y="0"
+		     viewBox="0 0 32 32" enable-background="new 0 0 64 64" xml:space="preserve">
+		    <g class="hamburger-icon__container">
+		      <path class="hamburger-icon__line hamburger-icon__top" d="M4,10h24c1.1,0,2-0.9,2-2s-0.9-2-2-2H4C2.9,6,2,6.9,2,8S2.9,10,4,10z"/>
+		      <path class="hamburger-icon__line hamburger-icon__middle" d="M28,14H4c-1.1,0-2,0.9-2,2s0.9,2,2,2h24c1.1,0,2-0.9,2-2S29.1,14,28,14z"/>
+		      <path class="hamburger-icon__line hamburger-icon__bottom" d="M28,22H4c-1.1,0-2,0.9-2,2s0.9,2,2,2h24c1.1,0,2-0.9,2-2S29.1,22,28,22z"/>
+		    </g>
+		  </svg>
+		</div>
 
 		<div class="menu-for-mobile">	
 		<div class="menu-for-mobile-background"></div>
@@ -42,9 +54,10 @@
 					
 		</div>
 
-		<div class="topline">
-			
-			<ul>
+
+
+		<div class="decstop-menu">
+				<ul>
 				<li><a href="index.html"><img src="img/logo.svg"></a></li>
 				<li><a href="#" class="active_main_menu">Аренда</a></li>
 				<li><a href="#" class="active_main_menu">Продажа</a></li>
@@ -52,7 +65,8 @@
 				<li><a href="#" ><img src="img/ellipsis-h.svg" alt="">Еще</a></li>
 			</ul>
 				<a href="#" type="button" class="add-adt"><i class="fa fa-plus-circle" aria-hidden="true"></i>Разместить обьявление</a>
-			<a href="#" type="button" class="login">Войти</a>	
+			<a href="#" type="button" class="login">Войти</a>
+		</div>						
 		</div>
 		<h1>Поиск недвижимости в Украине</h1>
 		<div class="bottomline">
@@ -69,7 +83,7 @@
 				<div class="rooms">
 				<h4>Количество комнат</h4>	  
 				  <ul class="number-rooms">
-				  	<li><a href="#">1</a></li>
+				  	<li><a href="#"><input type="checkbox" value="1" id="slideOne" name="1" /></a></li>
 				  	<li><a href="#">2</a></li>
 				  	<li><a href="#">3</a></li>
 				  	<li><a href="#">4</a></li>
@@ -354,16 +368,21 @@
 				});
 			})();
 // этот скрипт добаляет пару классов для корректного отображения точки внутри селекта во второй секции
-		// var j = jQuery.noConflict();
+		var j = jQuery.noConflict();
 		// 	j(document).ready(function() {
 		// 		j(".real-estate-descr").find('.cs-placeholder').addClass('item').css({"padding-left": "3vw"});
 		// 	});
-
+			j(document).ready(function() {
+				j('.icon').click(function(event) {
+					j(this).toggleClass('active');	
+					j('.menu-for-mobile').toggle('slow/400/fast');					
+				});
+			});
 
 
 			// slick slider
 			jQuery(document).ready(function(){
-			  jQuery(".best-offer-thumbnails").slick({
+			jQuery(".best-offer-thumbnails").slick({
         		arrows: true,
         		speed: 1500,
         		infinite: true,
