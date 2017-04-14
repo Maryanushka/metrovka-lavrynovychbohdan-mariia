@@ -27,10 +27,12 @@ div.cs-skin-border {
 	opacity: 0;
 	-webkit-transition: opacity 0.2s, visibility 0s 0.2s;
 	transition: opacity 0.2s, visibility 0s 0.2s;
+	display: none;
 }
 
 .cs-skin-border.cs-active .cs-options {
 	opacity: 1;
+	display: block;
 	-webkit-transition: opacity 0.2s;
 	transition: opacity 0.2s;
 }

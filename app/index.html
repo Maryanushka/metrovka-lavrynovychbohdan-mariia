@@ -59,7 +59,7 @@
 		<div class="decstop-menu">
 				<ul>
 				<li><a href="index.html"><img src="img/logo.svg"></a></li>
-				<li><a href="#" class="active_main_menu">Аренда</a></li>
+				<li><a href="javascript:PopUpShow()" class="active_main_menu">Аренда</a></li>
 				<li><a href="#" class="active_main_menu">Продажа</a></li>
 				<li><a href="#" class="active_main_menu">Посуточно</a></li>
 				<li><a href="#" ><img src="img/ellipsis-h.svg" alt="">Еще</a></li>
@@ -324,6 +324,64 @@
 		</div>
 		<a href="#" type="button" class="more">Перейти на страницу блога</a>
 	</section>
+	<!-- popup block -->
+	<div class="topline-popup" id="popup1">
+	    <div class="topline-popup-content">
+	    	<a id="popup-close" href="javascript:PopUpHide()">x</a>
+	        <div class="topline-popup-request">
+	        	<h2>Оставить заявку</h2>
+	        	<p>Нет времени искать по сайту?
+					Заполняй критерии поиска и получай
+					акутальные объявления как только они появляются на Metrovka.
+				</p>
+	        </div>
+	        <div class="topline-popup-flat-select">
+	        	<ul class="select-real-estate">
+					<li><a href="#" class="select-real-estate-active">Район</a></li>
+					<li><a href="#" class="select-real-estate-active">Метро</a></li>
+				</ul>
+	        	<form action="">
+					<div class="select-station">
+						<select class="cs-select cs-skin-border">
+							<option disabled selected>
+							Голосеевский</option>
+							<option>Оболонский</option>
+							<option>Подольский</option>
+						</select>
+					</div>
+					<div class="rooms">
+						<h4>Кол-во комнат</h4>	  
+						  <ul class="number-rooms">
+						  	<li><label>
+								<input type="checkbox" name="room1">
+								<span class="checkbox checkbox-active">1</span>
+							</label></li>
+							<li><label>
+								<input type="checkbox" name="room1">
+								<span class="checkbox checkbox-active">2</span>
+							</label></li>
+							<li><label>
+								<input type="checkbox" name="room3">
+								<span class="checkbox checkbox-active">3</span>
+							</label></li>
+							<li><label>
+								<input type="checkbox" name="room4">
+								<span class="checkbox checkbox-active">4</span>
+							</label></li>
+							<li><label>
+								<input type="checkbox" name="room5">
+								<span class="checkbox checkbox-active">5</span>
+							</label></li>
+						  </ul>
+					</div>
+					<input name="name" type='text' placeholder="Как вас зовут?">
+					<input name="email" type='email' placeholder="Email">
+					<a type='submit' href="#" class="green-button">Оставить заявку</a>
+				</form>
+	        </div>
+	    </div>
+	</div>
+
 
 	<footer>
 		<div class="footer best-offer-bl">
@@ -364,11 +422,24 @@
 		</div>
 	</footer>
 
-
-	<!-- lavrynovychbohdan finish -->
-
 	<!-- jquery -->
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+	<!-- lavrynovychbohdan finish -->
+	<script>
+		jQuery(document).ready(function(){
+        
+    });
+    //Функция отображения PopUp
+    function PopUpShow(){
+        jQuery("#popup1").show();
+    }
+    //Функция скрытия PopUp
+    function PopUpHide(){
+        jQuery("#popup1").hide();
+    }
+	</script>
+
 	<!-- плагин для селекта -->
 	<script src="js/classie.js"></script>
 	<script src="js/selectFx.js"></script>
@@ -394,7 +465,6 @@
 					j('.menu-for-mobile').toggle('slow/400/fast');					
 				});
 			});
-
 
 			// slick slider
 			jQuery(document).ready(function(){
