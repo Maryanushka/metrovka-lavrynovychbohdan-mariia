@@ -83,11 +83,26 @@
 				<div class="rooms">
 				<h4>Количество комнат</h4>	  
 				  <ul class="number-rooms">
-				  	<li><a href="#"><input type="checkbox" value="1" id="slideOne" name="1" /></a></li>
-				  	<li><a href="#">2</a></li>
-				  	<li><a href="#">3</a></li>
-				  	<li><a href="#">4</a></li>
-				  	<li><a href="#">5</a></li>
+				  	<li><label>
+						<input type="checkbox" name="room1">
+						<span class="checkbox checkbox-active">1</span>
+					</label></li>
+					<li><label>
+						<input type="checkbox" name="room1">
+						<span class="checkbox checkbox-active">2</span>
+					</label></li>
+					<li><label>
+						<input type="checkbox" name="room3">
+						<span class="checkbox checkbox-active">3</span>
+					</label></li>
+					<li><label>
+						<input type="checkbox" name="room4">
+						<span class="checkbox checkbox-active">4</span>
+					</label></li>
+					<li><label>
+						<input type="checkbox" name="room5">
+						<span class="checkbox checkbox-active">5</span>
+					</label></li>
 				  </ul>
 				</div>
 		
@@ -369,6 +384,7 @@
 			})();
 // этот скрипт добаляет пару классов для корректного отображения точки внутри селекта во второй секции
 		var j = jQuery.noConflict();
+		var jQ= jQuery.noConflict();
 		// 	j(document).ready(function() {
 		// 		j(".real-estate-descr").find('.cs-placeholder').addClass('item').css({"padding-left": "3vw"});
 		// 	});

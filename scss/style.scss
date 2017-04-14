@@ -112,33 +112,44 @@
 			width: 100%;
 		}
 	}
-	.number-rooms{
-		list-style-type: none;
-	    display: flex;
-	    justify-content: space-between;
-	    width: 100%;
-	    padding: 0;
-	    margin: 0;
-    	margin-top: 10px;
-	    a {
-	    width: 40px;
-	    height: 40px;
-	    border: 2px solid;
-	    border-radius: 50%;
-	    display: flex;
-	    justify-content: center;
-	    align-items: center;
-	    &:hover{
-	    	background-color: $white;
-	    	color: $bgc;
-	    	border-color: $white;
-	    }
-		}
-	}
-
 }
 
 
+.number-rooms{
+	list-style-type: none;
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+    margin-top: 10px;
+	.checkbox{
+	    border-radius: 50%;
+	    display: flex;
+	    align-items: center;
+	    justify-content: center !important;
+	    cursor: pointer;
+	    height: 40px;
+	    width: 40px;
+	}
+
+	.checkbox-active{
+	    border: 2px solid #fff ;
+	     &:active, &:focus{
+	        background-color: #fff;
+	        color: $bgc;
+	    }
+	}
+}
+
+input[type="checkbox"]{
+    display: none;
+    &:checked + .checkbox-active{
+        background-color: #fff;
+        color: $bgc;
+    }
+}
+	
 // second section real  estate
 .real-estate{
 	margin: 0 auto;
