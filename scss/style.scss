@@ -473,7 +473,7 @@ span.item:before {
 		a{
 			display:inline-block;
 		}
-		span{
+		a{
 			height: 14px;
 		    width: 14px;
 		    margin: 0 4px;
@@ -776,6 +776,9 @@ span.item:before {
 			.social-links-list > li {
 				padding-bottom: 0.75rem;
 			}
+		}
+		.footer .footer-link-logo{
+			max-width:3rem;
 		}
 	}
 	
