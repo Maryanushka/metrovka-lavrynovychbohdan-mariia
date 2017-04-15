@@ -14,8 +14,6 @@
 .header{
 	padding: 0 10.5%;
 	h1{
-		padding-top: 6%;
-		margin-bottom: 4%;
 		font-size: 2.5em;
 		@media screen and(max-width: 570px){
 			font-size: 1.5em;
@@ -23,11 +21,13 @@
 	}
 }
 .topline{
-	padding-top: 1.5%;
+	padding: 1.5% 0 6%;
 	display:flex;
 	align-items: center;
 	justify-content: space-between;
 	.decstop-menu{
+	position: relative;
+    width: 100%;
 	display:flex;
 	align-items: center;
 	justify-content: space-between;
@@ -46,12 +46,14 @@
 			img{
 				width: 3em;
 				height: 3em;
-
 			}
-			&:last-child img{
-				display: inline-block;
-				width: 1.5vw;
-				padding-right: 1vw;
+			&:nth-child{
+				margin-right: 1.3rem;
+			}
+			&:last-child:before{
+				content: '•••';
+				position: relative;
+    			left: -1.3rem;
 			}
 			&:last-child a{
 				display: flex;
@@ -66,13 +68,13 @@
 	@include hover_underline(1vw);
 }
 .active_main_menu:hover:before{
-	width: 110%;
+	width: 100%;
 }
 .login:before{
 	@include hover_underline(1.8vw);
 }
 .login:hover:before{
-	width: 110%;
+	width: 100%;
 }
 
 
@@ -82,7 +84,7 @@
 	justify-content: space-between;
 	align-items:flex-end;
     flex-wrap: wrap;
-    padding-bottom: 4%;
+    padding: 4% 0;
 	.select-city{
 		width:40%;
 		z-index: 1;
@@ -204,6 +206,7 @@ input[type="checkbox"]{
 	    	color: $white;
 	    	&:hover{
 	    		color: $green;
+	    		transition: all .5 linear;
 	    	}
 		}
 	}
@@ -224,7 +227,7 @@ input[type="checkbox"]{
 	background-color: $green;
 }
 .select-real-estate-active:hover:before{
-	width: 110%;
+	width: 100%;
 }
 // добавление красной точки в селект
 span.item:before {
@@ -338,7 +341,7 @@ span.item:before {
 	background-color: $green;
 }
 .items-active:hover:before{
-	width: 110%;
+	width: 100%;
 }
 .helper {
     margin-bottom: 50px;
@@ -382,7 +385,7 @@ span.item:before {
 		a:hover{
 			border-bottom: 1px green solid;
 			box-sizing: border-box;
-		}
+			transition: all .5 linear;
 	}
 	a{ 
 		color: $dark-grey;
@@ -456,6 +459,7 @@ span.item:before {
 				    	background-color: $white;
 				    	border: 2px solid $green;
 				    	color: $green;
+				    	transition: all .5 linear;
 				    }
 			    }
 			}
@@ -480,11 +484,13 @@ span.item:before {
 				    	background-color: $white;
 				    	border: 2px solid $green;
 				    	color: $green;
+				    	transition: all .5 linear;
 				    }
 			&:focus{
 				    	background-color: $white;
 				    	border: 2px solid $green;
 				    	color: $green;
+				    	transition: all .5 linear;
 				    }
 		}
 	}
@@ -715,6 +721,7 @@ span.item:before {
 			margin: 0 auto;
 			&:hover {
 				color: $green;
+				transition: all .5 linear;
 			}
 		}
 		h2 {
@@ -756,6 +763,7 @@ span.item:before {
 						background-color: $white;
 						border: 2px solid $green;
 						color: $green;
+						transition: all .5 linear;
 					}
 				}
 				.fa {
@@ -770,6 +778,6 @@ span.item:before {
 	}
 
 	// slider styles
-	.slick-slide img {
-		display: inline-block;
-	}
+.slick-slide img{
+	display: inline-block;
+}

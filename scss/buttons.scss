@@ -22,6 +22,7 @@
 		&:hover{
 			color:$green;
 			background-color: $white;
+			transition: .5s linear;
 		}
 	}
 
@@ -37,6 +38,7 @@
     &:hover{
     	background-color: $green;
     	color: $white;
+    	transition: .5s linear;
     }
 }
 .green-button {
@@ -53,6 +55,7 @@
 	    	background-color: $white;
 	    	border: $btn-border solid $green;
 	    	color: $green;
+	    	transition: .5s linear;
 	    }
 	}
 
@@ -77,6 +80,7 @@
     &:hover{
     	border-color: $green;
     	color: $green;
+    	transition: .5s linear;
     }
 }
 
@@ -86,6 +90,9 @@
   display: block;
   width: 2rem;
   height: auto;
+  position: fixed;
+  top:1rem;
+  right: 3rem;
 }
 svg.hamburger-icon {
   margin: auto;
@@ -134,10 +141,12 @@ i.fa.fa-plus-circle{
     &:hover{
     	color: $green;
     	border: 2px solid $green;
+    	transition: .5s linear;	 	
     }
     
 }
 
 .footer a:hover{
   color: $green;
+  transition: .5s linear; 
 }

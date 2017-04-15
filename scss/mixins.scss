@@ -1,6 +1,5 @@
 // миксины
 @mixin hover_underline($top){
-	left: -2px;
     position: relative;
     top: $top;
     background: $white;
