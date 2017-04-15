@@ -386,10 +386,11 @@ span.item:before {
 			border-bottom: 1px green solid;
 			box-sizing: border-box;
 			transition: all .5 linear;
-	}
-	a{ 
-		color: $dark-grey;
-		font-size: 0.875rem;
+		}
+		a{ 
+			color: $dark-grey;
+			font-size: 0.875rem;
+		}
 	}
 	.telegram-promo-presentation{
 		display: flex;
@@ -405,6 +406,7 @@ span.item:before {
     			display: none;
     		}
 		}
+	}
 		.telegram-promo-presentation--right{
 			display: flex;
 			flex-direction: column;
@@ -416,7 +418,7 @@ span.item:before {
 			@media screen and (max-width:600px){
     			width: 100%;
     		}
-			}
+			
 			ol>li{
 				font-size: 0.875rem; //14px
 				line-height: 1.25rem;
@@ -459,7 +461,7 @@ span.item:before {
 				    	background-color: $white;
 				    	border: 2px solid $green;
 				    	color: $green;
-				    	transition: all .5 linear;
+				    	transition: all .5s linear;
 				    }
 			    }
 			}
@@ -763,7 +765,7 @@ span.item:before {
 						background-color: $white;
 						border: 2px solid $green;
 						color: $green;
-						transition: all .5 linear;
+						transition: all .5s linear;
 					}
 				}
 				.fa {
@@ -776,8 +778,9 @@ span.item:before {
 			}
 		}
 	}
+	
 
 	// slider styles
 .slick-slide img{
 	display: inline-block;
-}
+	}
