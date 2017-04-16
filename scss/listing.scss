@@ -77,12 +77,19 @@
 .login:hover:before{
 	width: 110%;
 }
-
 .spreader{
 	display: flex;
 	justify-content: space-between;
 }
-
+.icon{
+	top: 0.5rem;
+}
+.icon.active {
+	position: fixed;
+	top: 0.5rem;
+	right: 5rem;
+	z-index: 10005;
+}
 .left{
 	flex-direction: column;
 	width: 63.845%;

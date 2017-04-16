@@ -271,6 +271,66 @@
 	</div>
 	<!-- jquery -->
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script>
+        // это скрипт для мини плагина коррктного отображения селектора
+        (function() {
+            [].slice.call( document.querySelectorAll( 'select.cs-select' ) ).forEach( function(el) {
+                new SelectFx(el);
+            });
+        })();
+        // этот скрипт добаляет пару классов для корректного отображения точки внутри селекта во второй секции
+        var j = jQuery.noConflict();
+        var jQ= jQuery.noConflict();
+        // 	j(document).ready(function() {
+        // 		j(".real-estate-descr").find('.cs-placeholder').addClass('item').css({"padding-left": "3vw"});
+        // 	});
+        j(document).ready(function() {
+            j('.icon').click(function(event) {
+                j(this).toggleClass('active');
+                j('.menu-for-mobile').toggle('slow/400/fast');
+            });
+        });
+
+        // slick slider
+        jQuery(document).ready(function(){
+            jQuery(".best-offer-thumbnails").slick({
+                arrows: true,
+                speed: 1500,
+                infinite: true,
+                variableWidth: true,
+                responsive:[
+                    {breakpoint: 1200,
+                        settings:{
+                            slidesToShow: 4,
+                            slideToScroll:1,
+                            infinite: true,
+                            dots: false
+                        }},
+                    {breakpoint: 800,
+                        settings:{
+                            slidesToShow: 3,
+                            slideToScroll:1,
+                            infinite: true,
+                            dots: false
+                        }},
+                    {breakpoint: 600,
+                        settings:{
+                            slidesToShow: 2,
+                            slideToScroll:1,
+                            infinite: true,
+                            dots: false
+                        }},
+                    {breakpoint: 400,
+                        settings:{
+                            slidesToShow: 1,
+                            slideToScroll:1,
+                            infinite: true,
+                            dots: false
+                        }},
+                ]
+            });
+        });
+	</script>
 	<script src="//localhost:35729/livereload.js?snipver=1" async="" defer=""></script>
 </body>
 </html>
