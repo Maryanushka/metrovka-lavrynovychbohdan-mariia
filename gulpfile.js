@@ -37,7 +37,7 @@ gulp.task('css', function () {
     .pipe(connect.reload())
 });
 
-gulp.task('css', function () {
+gulp.task('css_next', function () {
   return gulp.src('scss/listing.scss')
     .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer({browsers: ['last 2 versions']}))

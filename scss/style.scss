@@ -231,17 +231,13 @@ input[type="checkbox"]{
 }
 // добавление красной точки в селект
 span.item:before {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left:1vw;
-    width: 2vw;
-    content: "";
-    background: url(../img/red-circle.svg) center no-repeat;
-    @media screen and (max-width: 600px){
-		    left:3vw;
-   			width: 3vw;
-    }
+	content: '';
+	display: inline-block;
+	width: 0.5rem;
+	height: 0.5rem;
+	border-radius: 50%;
+	background-color: red;
+	margin-right: 1rem;
 }
 @media screen and (max-width: 600px){
 	span.cs-placeholder:after{
