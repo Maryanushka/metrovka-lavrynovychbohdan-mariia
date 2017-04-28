@@ -66,4 +66,4 @@ gulp.task('watch_next', function(){
 	gulp.watch('listing/second.html', ['html'])
 })
 // default
-gulp.task('default', ['connect', 'connect_next' , 'css', 'css_next' , 'html', 'watch_next', 'html_next' , 'watch_next']);
+gulp.task('default', ['watch', 'watch_next', 'connect' , 'css' , 'html' , 'connect_next', 'html_next', 'css_next' ]);

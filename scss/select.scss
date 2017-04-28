@@ -1,0 +1,41 @@
+@import 'vars.scss';
+@import 'base.scss';
+
+// combobox 
+ .custom-combobox {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 18.5rem;
+    height: 2.5rem;
+  }
+  .custom-combobox-toggle {
+    content: "";
+    position: absolute;
+    right: 1rem;
+    padding: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid green;
+  }
+  .custom-combobox-input {
+    margin: 0;
+    padding: 0 1rem;
+    width: 100%;
+    height: 100%;
+    border: 2px solid green;
+  }
+
+  li.ui-menu-item {
+    color: $green;
+    list-style-type: none;
+    padding: .7rem 1rem;
+    background-color: $white;
+    width: 16.5rem;
+}
+
+li.ui-menu-item:hover, li.ui-menu-item:focus, li.ui-menu-item:active {
+    background-color: $green;
+    color: $white;
+}

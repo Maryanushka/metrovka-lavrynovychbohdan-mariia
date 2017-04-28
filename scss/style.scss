@@ -1,9 +1,10 @@
+@import 'normalize.scss';
 @import 'vars.scss';
 @import 'base.scss';
 @import 'buttons.scss';
 @import 'modules.scss';
 @import 'mixins.scss';
-
+@import 'select.scss';
 
 .main{
 	max-width: 1130px;
@@ -86,11 +87,12 @@
     flex-wrap: wrap;
     padding: 4% 0;
 	.select-city{
-		width:40%;
+		width:32%;
 		z-index: 1;
 		height: 70px;
 		padding-right: 1rem;
-		@media screen and(max-width: 1000px){
+		margin-bottom: 1rem;
+		@media screen and(max-width: 1030px){
 			width: 50%;
 		}
 		@media screen and(max-width: 655px){
@@ -103,12 +105,13 @@
 	.rooms {
     min-width: 30%;
     padding-right: 1rem;
+    margin-bottom: 1rem;
     	@media screen and(max-width: 655px){
 			margin-top: 1rem;
 		}
-		@media screen and(max-width: 570px){
+		@media screen and(max-width: 690px){
 			margin-bottom: 1rem;
-			width: 80%;
+			width: 70%;
 		}
 		@media screen and(max-width: 400px){
 			width: 100%;
@@ -783,3 +786,5 @@ span.item:before {
 .slick-slide img{
 	display: inline-block;
 	}
+
+

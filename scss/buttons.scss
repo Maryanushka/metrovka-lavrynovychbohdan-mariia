@@ -1,4 +1,4 @@
-@import 'vars.scss';
+  @import 'vars.scss';
 
 
 .decstop-menu>.add-adt{
@@ -58,7 +58,24 @@
 	    	transition: .5s linear;
 	    }
 	}
-
+.white-button {
+      width: 100%;
+      height: $button-height;
+      background-color: $white;
+      color: $green;
+      display: flex;
+      margin: 0%;
+      justify-content: center;
+      align-items: center;  
+      box-sizing: border-box;
+ 
+      &:hover{
+        background-color: transparent;
+        border: $btn-border solid $white;
+        color: $white;
+        transition: .5s linear;
+      }
+  }
 	.more{
 	text-align: center;
     color: $bgc;
@@ -149,4 +166,18 @@ i.fa.fa-plus-circle{
 .footer a:hover{
   color: $green;
   transition: .5s linear; 
+}
+
+input[type=button], input[type=reset], input[type=submit]{
+  border:none;
+  margin-bottom: 1rem;
+  @media screen and(max-width: 1030px){
+      margin-bottom: .5rem;
+    }
+}
+#header-submit, #configreset{
+  width: 33%;
+  @media screen and(max-width: 1030px){
+    width: 100%;
+  }
 }

@@ -8,12 +8,15 @@
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
 	<!-- щрифтовые иконки -->
 	<script src="https://use.fontawesome.com/a7eaca5453.js"></script>
-	<link rel="stylesheet" href="css/normalize.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script
+  src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+  integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+  crossorigin="anonymous"></script>
+
 	<!-- главные стили -->
 	<link rel="stylesheet" href="css/bundle.min.css">
-	<!-- стили плагина для селекта -->
-	<link rel="stylesheet" href="css/cs-select.css">
-	<link rel="stylesheet" href="css/cs-skin-border.css">
+
 	<!-- стили для слайдера -->
 	<link rel="stylesheet" href="libs/slick/slick.css">
 	<link rel="stylesheet" href="libs/slick/slick-theme.css">
@@ -69,16 +72,22 @@
 		</div>						
 		</div>
 		<h1>Поиск недвижимости в Украине</h1>
+				<form action="#" method="post" id="form-cities">
 		<div class="bottomline">
-		<div class="select-city">
-			<h4>Выберите город</h4>
-			<select class="cs-select cs-skin-border">
-					<option disabled selected>Киев</option>
-					<option>Львов</option>
-					<option>Одесса</option>
-					<option>Харьков</option>
-				</select>
-		</div>
+
+				<div class="select-city">
+					<h4>Выберите город</h4>
+					<select name="selectbox" class="select" id="cities">
+					    <option value="Киев">Киев</option>
+					    <option value="Харьков">Харьков</option>
+					    <option value="Житомир">Житомир</option>
+					    <option value="Львов">Львов</option>
+					    <option value="Одесса">Одесса</option>
+					    <option value="Чернигов">Чернигов</option>
+					    <option value="Борисполь">Борисполь</option>
+					    <option value="Черкассы">Черкассы</option>
+					</select>
+				</div>
 				
 				<div class="rooms">
 				<h4>Количество комнат</h4>	  
@@ -106,30 +115,34 @@
 				  </ul>
 				</div>
 		
-			  <a href="#" type="button" class="search">Перейти к поиску</a>
-		</div>
+			  <input type="submit" id="header-submit" class="white-button" value="Перейти к поиску">
+			  <input type="reset" id="configreset" value="Сбросить результаты" class="white-button">
+		</div>	 
+		 </form>
+		
 		</div>
 	</section>
 	<section class="real-estate">
 		<div class="wrapper">
 				<div class="real-estate-descr">
 					<h1>Недвижимость возле метро</h1>
+					
 					<ul class="select-real-estate">
 						<li><a href="#" class="select-real-estate-active">Квартиры</a></li>
 						<li><a href="#" class="select-real-estate-active">Дома</a></li>
 						<li><a href="#" class="select-real-estate-active">Офисы</a></li>
 					</ul>
+					<form action="#" method="post" id="form-station">
 					<div class="select-station">
-						<select class="cs-select cs-skin-border">
-							<option disabled selected>
-							Политехнический институт</option>
-							<option>Лыбидская</option>
-							<option>Левобережная</option>
-							<option>Харьковская</option>
+					<select name="selectbox" class="select" id="station-select">
+					    <option value="Левобережная">Левобережная</option>
+					    <option value="Крещатик">Крещатик</option>
+					    <option value="Арсенальная">Арсенальная</option>
 					</select>
 					</div>
 					
-					<a href="#" type="button" class="green-button">Показать результаты поиска</a>
+					<input type="submit" class="green-button" value="Показать результаты поиска"">
+					</form>
 				</div>
 				<img src="img/metro.png" alt="метро">
 		</div>
@@ -424,7 +437,10 @@
 
 	<!-- jquery -->
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-
+	<script
+	  src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+	  integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+	  crossorigin="anonymous"></script>
 	<!-- lavrynovychbohdan finish -->
 	<script>
 		jQuery(document).ready(function(){
@@ -441,24 +457,16 @@
 	</script>
 
 	<!-- плагин для селекта -->
-	<script src="js/classie.js"></script>
-	<script src="js/selectFx.js"></script>
+	<script src="js/select.js"></script>
+
 
 	<!-- скрипты для слайдера -->
 	<script type="text/javascript" src='libs/slick/slick.min.js'></script>
 	<script>
-	// это скрипт для мини плагина коррктного отображения селектора 
-			(function() {
-				[].slice.call( document.querySelectorAll( 'select.cs-select' ) ).forEach( function(el) {	
-					new SelectFx(el);
-				});
-			})();
-// этот скрипт добаляет пару классов для корректного отображения точки внутри селекта во второй секции
+
+// slider
 		var j = jQuery.noConflict();
-		var jQ= jQuery.noConflict();
-		// 	j(document).ready(function() {
-		// 		j(".real-estate-descr").find('.cs-placeholder').addClass('item').css({"padding-left": "3vw"});
-		// 	});
+
 			j(document).ready(function() {
 				j('.icon').click(function(event) {
 					j(this).toggleClass('active');	
