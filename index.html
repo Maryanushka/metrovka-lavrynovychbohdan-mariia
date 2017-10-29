@@ -1,6 +1,518 @@
-<html>
-  <head>
-    <meta http-equiv="refresh" content="0; url=http://metrovka-lavrynovychbohdan-mariia.github.io/app/index.html" />
-  </head>
-</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>lavrynovychbohdan-mariia</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- font -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+	<!-- щрифтовые иконки -->
+	<script src="https://use.fontawesome.com/a7eaca5453.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script
+  src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+  integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+  crossorigin="anonymous"></script>
 
+	<!-- главные стили -->
+	<link rel="stylesheet" href="css/bundle.min.css">
+
+	<!-- стили для слайдера -->
+	<link rel="stylesheet" href="libs/slick/slick.css">
+	<link rel="stylesheet" href="libs/slick/slick-theme.css">
+</head>
+<body>
+	<section class="main">
+		<div class="header">
+		<div class="topline">
+		<a href="index.html" class="topline-mobile-logo"><img src="img/logo.svg"></a>
+		<div class="icon">
+		  <svg version="1.1" id="hamburger-icon" class="hamburger-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0" y="0"
+		     viewBox="0 0 32 32" enable-background="new 0 0 64 64" xml:space="preserve">
+		    <g class="hamburger-icon__container">
+		      <path class="hamburger-icon__line hamburger-icon__top" d="M4,10h24c1.1,0,2-0.9,2-2s-0.9-2-2-2H4C2.9,6,2,6.9,2,8S2.9,10,4,10z"/>
+		      <path class="hamburger-icon__line hamburger-icon__middle" d="M28,14H4c-1.1,0-2,0.9-2,2s0.9,2,2,2h24c1.1,0,2-0.9,2-2S29.1,14,28,14z"/>
+		      <path class="hamburger-icon__line hamburger-icon__bottom" d="M28,22H4c-1.1,0-2,0.9-2,2s0.9,2,2,2h24c1.1,0,2-0.9,2-2S29.1,22,28,22z"/>
+		    </g>
+		  </svg>
+		</div>
+
+		<div class="menu-for-mobile">	
+		<div class="menu-for-mobile-background"></div>
+
+			<div class="menu-for-mobile-wrapper">
+			<a href="index.html"><img src="img/logo.svg"></a>
+				<ul>				
+					<li><a href="#" class="active-mobile-menu">Аренда</a></li>
+					<li><a href="#" class="active-mobile-menu">Продажа</a></li>
+					<li><a href="#" class="active-mobile-menu">Посуточно</a></li>
+					<li><a href="#" class="active-mobile-menu">Блог</a></li>
+					<li><a href="#" class="active-mobile-menu">Контакты</a></li>
+					<li><a href="#" class="active-mobile-menu" >Новый поиск</a></li>
+					<li><a href="javascript:PopUpShow()" type="button" class="add-adt"><i class="fa fa-plus-circle" aria-hidden="true"></i>Разместить обьявление</a></li>
+					<li><a href="#" type="button" class="mobile-menu-login">Войти</a></li>
+				</ul>
+			
+			</div>
+					
+		</div>
+
+
+
+		<div class="decstop-menu">
+				<ul>
+				<li><a href="index.html"><img src="img/logo.svg"></a></li>
+				<li><a href="#" class="active_main_menu">Аренда</a></li>
+				<li><a href="#" class="active_main_menu">Продажа</a></li>
+				<li><a href="#" class="active_main_menu">Посуточно</a></li>
+				<li><a href="#">Еще</a></li>
+			</ul>
+				<a href="javascript:PopUpShow()" type="button" class="add-adt"><i class="fa fa-plus-circle" aria-hidden="true"></i>Разместить обьявление</a>
+			<a href="#" type="button" class="login">Войти</a>
+		</div>						
+		</div>
+		<h1>Поиск недвижимости в Украине</h1>
+				<form action="#" method="post" id="form-cities">
+		<div class="bottomline">
+
+				<div class="select-city">
+					<h4>Выберите город</h4>
+					<select name="selectbox" class="select" id="cities">
+					    <option value="Киев">Киев</option>
+					    <option value="Харьков">Харьков</option>
+					    <option value="Житомир">Житомир</option>
+					    <option value="Львов">Львов</option>
+					    <option value="Одесса">Одесса</option>
+					    <option value="Чернигов">Чернигов</option>
+					    <option value="Борисполь">Борисполь</option>
+					    <option value="Черкассы">Черкассы</option>
+					</select>
+				</div>
+				
+				<div class="rooms">
+				<h4>Количество комнат</h4>	  
+				  <ul class="number-rooms">
+				  	<li><label>
+						<input type="checkbox" name="room1">
+						<span class="checkbox checkbox-active">1</span>
+					</label></li>
+					<li><label>
+						<input type="checkbox" name="room1">
+						<span class="checkbox checkbox-active">2</span>
+					</label></li>
+					<li><label>
+						<input type="checkbox" name="room3">
+						<span class="checkbox checkbox-active">3</span>
+					</label></li>
+					<li><label>
+						<input type="checkbox" name="room4">
+						<span class="checkbox checkbox-active">4</span>
+					</label></li>
+					<li><label>
+						<input type="checkbox" name="room5">
+						<span class="checkbox checkbox-active">5</span>
+					</label></li>
+				  </ul>
+				</div>
+		
+			  <input type="submit" id="header-submit" class="white-button" value="Перейти к поиску">
+			  <input type="reset" id="configreset" value="Сбросить результаты" class="white-button">
+		</div>	 
+		 </form>
+		
+		</div>
+	</section>
+	<section class="real-estate">
+		<div class="wrapper">
+				<div class="real-estate-descr">
+					<h1>Недвижимость возле метро</h1>
+					
+					<ul class="select-real-estate">
+						<li><a href="#" class="select-real-estate-active">Квартиры</a></li>
+						<li><a href="#" class="select-real-estate-active">Дома</a></li>
+						<li><a href="#" class="select-real-estate-active">Офисы</a></li>
+					</ul>
+					<form action="#" method="post" id="form-station">
+					<div class="select-station">
+					<select name="selectbox" class="select" id="station-select">
+					    <option value="Левобережная">Левобережная</option>
+					    <option value="Крещатик">Крещатик</option>
+					    <option value="Арсенальная">Арсенальная</option>
+					</select>
+					</div>
+					
+					<input type="submit" class="green-button" value="Показать результаты поиска"">
+					</form>
+				</div>
+				<img src="img/metro.png" alt="метро">
+		</div>
+		
+</section>
+<!-- вторая секция/ second section-->
+	<section class="best-offer">
+	<div class="best-offer-wrapper ">
+		<h1>Лучшие предложения в Киеве</h1>
+		<div class="best-offer-thumbnails helper">
+			<div class="best-offer-item">
+				<img src="img/homees-01.jpg" alt="квартира">
+				<div class="best-offer-description">
+					<h3>7 800 грн<img src="img/green-check.svg" alt="chek"></h3>
+					<div class="best-offer-group">	
+						<span>2 комн.</span><span>.</span><span>30 кв.м.</span>
+					</div>
+					<h4><img src="img/red-circle.svg" alt="">Политехнический институт</h4>
+				</div>		
+			</div>
+			<div class="best-offer-item">
+				<img src="img/homees-01.jpg" alt="квартира">
+				<div class="best-offer-description">
+					<h3>7 800 грн<img src="img/green-check.svg" alt="chek"></h3>
+					<div class="best-offer-group">	
+						<span>2 комн.</span><span>.</span><span>30 кв.м.</span>
+					</div>
+					<h4><img src="img/red-circle.svg" alt="">Политехнический институт</h4>
+				</div>		
+			</div>
+			<div class="best-offer-item">
+				<img src="img/homees-01.jpg" alt="квартира">
+				<div class="best-offer-description">
+					<h3>7 800 грн<img src="img/green-check.svg" alt="chek"></h3>
+					<div class="best-offer-group">	
+						<span>2 комн.</span><span>.</span><span>30 кв.м.</span>
+					</div>
+					<h4><img src="img/red-circle.svg" alt="">Политехнический институт</h4>
+				</div>		
+			</div>
+			
+			<div class="best-offer-item">
+				<img src="img/homees-01.jpg" alt="квартира">
+				<div class="best-offer-description">
+					<h3>7 800 грн<img src="img/green-check.svg" alt="chek"></h3>
+					<div class="best-offer-group">	
+						<span>2 комн.</span><span>.</span><span>30 кв.м.</span>
+					</div>
+					<h4><img src="img/red-circle.svg" alt="">Политехнический институт</h4>
+				</div>		
+			</div>
+		</div>
+		
+	</div>
+		<a href="#" type="button" class="more">Смотреть лучшие ценовые предложения</a>
+	</section>
+
+
+
+<!-- third section треться секция -->
+	<section class="best-offer">
+	<div class="best-offer-wrapper">
+		<h1>Последние обьявления в Киеве</h1>
+			<ul class="menu-items">
+				<li><a href="#" class="items-active">Квартиры</a></li>
+				<li><a href="#" class="items-active">Дома</a></li>
+				<li><a href="#" class="items-active">Офисы</a></li>
+			</ul>
+
+
+		<div class="best-offer-thumbnails helper">
+			<div class="best-offer-item">
+				<img src="img/homees-01.jpg" alt="квартира">
+				<div class="best-offer-description">
+					<h3>11 800 грн<img src="img/green-check.svg" alt="chek"></h3>
+					<div class="best-offer-group">	
+						<span>2 комн.</span><span>.</span><span>48 кв.м.</span>
+					</div>
+					<h4><img src="img/red-circle.svg" alt="">Политехнический институт</h4>
+				</div>		
+			</div>
+			<div class="best-offer-item">
+				<img src="img/homees-01.jpg" alt="квартира">
+				<div class="best-offer-description">
+					<h3>15 000 грн<img src="img/green-check.svg" alt="chek"></h3>
+					<div class="best-offer-group">	
+						<span>3 комн.</span><span>.</span><span>100 кв.м.</span>
+					</div>
+					<h4><img src="img/red-circle.svg" alt="">Шулявская</h4>
+				</div>		
+			</div>
+			<div class="best-offer-item">
+				<img src="img/homees-01.jpg" alt="квартира">
+				<div class="best-offer-description">
+					<h3>11 800 грн<img src="img/green-check.svg" alt="chek"></h3>
+					<div class="best-offer-group">	
+						<span>1 комн.</span><span>.</span><span>30 кв.м.</span>
+					</div>
+					<h4><img src="img/red-circle.svg" alt="">Контрактовая площадь</h4>
+				</div>		
+			</div>
+			
+			<div class="best-offer-item">
+				<img src="img/homees-01.jpg" alt="квартира">
+				<div class="best-offer-description">
+					<h3>7 000 грн<img src="img/green-check.svg" alt="chek"></h3>
+					<div class="best-offer-group">	
+						<span>2 комн.</span><span>.</span><span>40 кв.м.</span>
+					</div>
+					<h4>просп. Победы 18А</h4>
+				</div>		
+			</div>
+		</div>
+		
+	</div>
+		<a href="#" type="button" class="more">Смотреть самые свежие обьявления</a>
+	</section>
+
+
+	<!-- lavrynovychbohdan start -->
+	
+	<section class='telegram-promo'>
+		<div class="telegram-promo-description">
+			<h4>
+				Общайтесь в Telegram
+			</h4>
+			<p>
+				Не отвлекайтесь больше на формальности. Получайте моментальные уведомления о новых обьявлениях, общайтесь без ограничений. 
+			</p>
+			<div class="telegram-tabs">
+				<a href="#">Поиск недвижемости</a>
+				<a href="#">Общение с клиентами</a>
+			</div>
+		</div>
+		<div class='telegram-promo-presentation'>
+			<img src="./img/phone.png" alt="iphone-black">
+			<div class="telegram-promo-presentation--right">
+				<h2><img src="img/telegram.png" alt="telegram-icon">Telegram</h2>
+				<div class="telegram-offer-func">
+					<h2>Metrovka Bot</h2>
+					<ol>
+						<li>Собирайте аналитику по объектам</li>
+						<li>Получайте подсказки по эффективному продвижению объявлений</li>
+						<li>Общайтесь с клиентами через специальный канал телекоммуникации</li>
+					</ol>
+					<a class="return" href="#" clas="green-button">Присоединиться в Telegram</a>
+				</div>		
+			</div>
+		</div>
+		<div class="telegram-toogle">
+			<a href=""></a>
+			<a href=""></a>
+		</div>
+	</section>
+
+	<section class="blog-metrovka">
+		<div class="blog-metrovka-header">
+			<h2>Блог Metrovka</h2>
+			<p>Хитрости, приемы, советы, фото и видео – все о том как продать, купить, сдать в аренду или арендовать недвижимость. </p>
+		</div>
+		<div class="blog-wrapper">
+			<div class="blog-item">
+				<img src="img/blog-metrovka-lifehack.jpg" alt="ipad_blog">
+				<div class="blog-description">
+					<a class="title title--purple href="">Лайфхак</a>
+					<h3><a href="">Киевляне могут оплатить коммуналку через Facebook…</a></h3>
+					<div class="best-offer-group">	
+						<span>Татьяна Малыняк </span><span>.</span><span>5 мин чтения</span>
+					</div>
+				</div>		
+			</div>
+			<div class="blog-item">
+				<img src="img/blog-metrovka-advice.jpg" alt="people">
+				<div class="blog-description">
+					<a class="title title--green"href="">Совет метровка</a>
+					<h3><a href="">ТОП-5 самых дешевых квартир Киева</a></h3>
+					<div class="best-offer-group">	
+						<span>Татьяна Малыняк </span><span>.</span><span>4 мин чтения</span>
+					</div>
+				</div>		
+			</div>
+			<div class="blog-item">
+				<img src="img/blog-metrovka-tech.jpg" alt="flat">
+				<div class="blog-description">
+					<a class="title title--blue href="">Технологии</a>
+					<h3><a href="">Смарт квартиры: цены, предложения и законность</a></h3>
+					<div class="best-offer-group">	
+						<span>Татьяна Малыняк </span><span>.</span><span>2 мин чтения</span>
+					</div>
+				</div>		
+			</div>
+		</div>
+		<a href="#" type="button" class="more">Перейти на страницу блога</a>
+	</section>
+	<!-- popup block -->
+	<div class="topline-popup" id="popup1">
+	    <div class="topline-popup-content">
+	    	<a id="popup-close" href="javascript:PopUpHide()">x</a>
+	        <div class="topline-popup-request">
+	        	<h2>Оставить заявку</h2>
+	        	<p>Нет времени искать по сайту?
+					Заполняй критерии поиска и получай
+					акутальные объявления как только они появляются на Metrovka.
+				</p>
+	        </div>
+	        <div class="topline-popup-flat-select">
+	        	<ul class="select-real-estate">
+					<li><a href="#" class="select-real-estate-active">Район</a></li>
+					<li><a href="#" class="select-real-estate-active">Метро</a></li>
+				</ul>
+	        	<form action="">
+					<div class="select-station">
+						<select class="cs-select cs-skin-border">
+							<option disabled selected>
+							Голосеевский</option>
+							<option>Оболонский</option>
+							<option>Подольский</option>
+						</select>
+					</div>
+					<div class="rooms">
+						<h4>Кол-во комнат</h4>	  
+						  <ul class="number-rooms">
+						  	<li><label>
+								<input type="checkbox" name="room1">
+								<span class="checkbox checkbox-active">1</span>
+							</label></li>
+							<li><label>
+								<input type="checkbox" name="room1">
+								<span class="checkbox checkbox-active">2</span>
+							</label></li>
+							<li><label>
+								<input type="checkbox" name="room3">
+								<span class="checkbox checkbox-active">3</span>
+							</label></li>
+							<li><label>
+								<input type="checkbox" name="room4">
+								<span class="checkbox checkbox-active">4</span>
+							</label></li>
+							<li><label>
+								<input type="checkbox" name="room5">
+								<span class="checkbox checkbox-active">5</span>
+							</label></li>
+						  </ul>
+					</div>
+					<input name="name" type='text' placeholder="Как вас зовут?">
+					<input name="email" type='email' placeholder="Email">
+					<a type='submit' href="#" class="green-button">Оставить заявку</a>
+				</form>
+	        </div>
+	    </div>
+	</div>
+
+
+	<footer>
+		<div class="footer best-offer-bl">
+			<div class="footer-links-info">
+				<ul>
+					<li><h2>Metrovka</h2></li>
+					<li><a href="#">О компании</a></li>
+					<li><a href="#">Пресса о нас</a></li>
+					<li><a href="#">Пользовательское соглашение</a></li>
+					<li><a href="#">Карта сайта</a></li>
+					<li><a href="#">Помощь</a></li>
+				</ul>
+				<ul>
+					<li><h2>Партнерство</h2></li>
+					<li><a href="#">Как разместить обьявление</a></li>
+					<li><a href="#">Инструменты продвижения</a></li>
+					<li><a href="#">Правила заполнения объявлений</a></li>
+				</ul>
+				<ul>
+					<li><h2>Узнайте больше</h2></li>
+					<li><a href="#">Бонусная программа Bonus+</a></li>
+					<li><a href="#">Telegram Metrovka Bot</a></li>
+					<li><a href="#">Как работает поиск</a></li>
+					<li><a href="#">Как пользоваться избранным</a></li>
+				</ul>
+				<ul class="social-links-list">
+					<li><h2>Контакты</h2></li>
+					<li class="social-links"><a href=""><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+						<a href=""><i class="fa fa-vk" aria-hidden="true"></i></a>
+						<a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+					<li>ул. Жилянская, 37</a></li>
+					<li>Киев, 01033</li>
+					<li><a href='mailto:info@metrovka.ua'>info@metrovka.ua</a></li>
+					<li><a class="result" href="#">Оставить заявку</a></li>
+				</ul>
+			</div>
+			<a class="footer-link-logo" href=""><img src="img/logom.svg" alt="logo_footer"></a>
+		</div>
+	</footer>
+
+	<!-- jquery -->
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script
+	  src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+	  integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+	  crossorigin="anonymous"></script>
+	<!-- lavrynovychbohdan finish -->
+	<script>
+		jQuery(document).ready(function(){
+        
+    });
+    //Функция отображения PopUp
+    function PopUpShow(){
+        jQuery("#popup1").show();
+    }
+    //Функция скрытия PopUp
+    function PopUpHide(){
+        jQuery("#popup1").hide();
+    }
+	</script>
+
+	<!-- плагин для селекта -->
+	<script src="js/select.js"></script>
+
+
+	<!-- скрипты для слайдера -->
+	<script type="text/javascript" src='libs/slick/slick.min.js'></script>
+	<script>
+
+// slider
+		var j = jQuery.noConflict();
+
+			j(document).ready(function() {
+				j('.icon').click(function(event) {
+					j(this).toggleClass('active');	
+					j('.menu-for-mobile').toggle('slow/400/fast');					
+				});
+			});
+
+			// slick slider
+			jQuery(document).ready(function(){
+			jQuery(".best-offer-thumbnails").slick({
+        		arrows: true,
+        		speed: 1500,
+        		infinite: true,
+        		variableWidth: true,
+        		responsive:[
+        			{breakpoint: 1200,
+        			settings:{
+        				slidesToShow: 4,
+        				slideToScroll:1,
+        				infinite: true,
+        				dots: false
+        			}},
+        			{breakpoint: 800,
+        				settings:{
+        				slidesToShow: 3,
+        				slideToScroll:1,
+        				infinite: true,
+        				dots: false
+        				}},
+        			{breakpoint: 600,
+        				settings:{
+        				slidesToShow: 2,
+        				slideToScroll:1,
+        				infinite: true,
+        				dots: false
+        				}},
+        			{breakpoint: 400,
+        				settings:{
+        				slidesToShow: 1,
+        				slideToScroll:1,
+        				infinite: true,
+        				dots: false
+        				}},
+        			]
+			  });
+			});
+		</script>
+</body>
+</html>
